@@ -22,6 +22,7 @@
 			var test7 = {"abcdef": 123};
 			var test8 = ["abcdef", 123];
 			function test9(){ return "abcdef"; }
+			var test10 = null;
 
 			console.log("\"abc\" " + typeof test1);
 			console.log("123 " + typeof test2);
@@ -32,6 +33,20 @@
 			console.log("{\"abcdef\": 123}  " + typeof test7);
 			console.log("[\"abcdef\", 123] " + typeof test8);
 			console.log("function test9(){ return \"abcdef\";}: " + typeof test9);
+			console.log("null " + typeof test10);
+
+			var a = "food" * 1000;
+			console.log("NaN? " + typeof a);
+			<!-- caso trabalhar com NaN, usar isNaN(a), não usar a == NaN -->
+
+
+			if(99 == "99"){
+				console.log("A number equals a string");	
+			}else{
+				console.log("No way a number equals a string");
+			}
+
+
 
 
 		</script>
