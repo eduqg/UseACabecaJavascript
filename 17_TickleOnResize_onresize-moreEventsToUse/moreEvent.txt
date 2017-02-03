@@ -1,0 +1,14 @@
+click
+resize
+play -> To videos
+pause
+load -> event when ta navigator loads the page
+unload -> Event to when you close or navigates outside
+dragstart -> event when action drag occur
+drop
+mouseover
+mousemove
+keypress
+mouseout
+touchstar -> in remote devices when you click and hold
+touchend -> receive this event when stop holding

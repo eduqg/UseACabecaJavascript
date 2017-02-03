@@ -21,17 +21,25 @@ function showAnswer(eventObj){
 	
 	nameSrc = image.src;
 	var finalStr = "blur.jpg";
-	console.log(nameSrc);
-	if(nameSrc.match(/finalStr$/)){
+	
 	//http://www.regular-expressions.info/anchors.html
-		console.log("Aqui1");
+	//https://pt.infobyip.com/regularexpressioncalculator.php
+	if(nameSrc.match(/blur\.jpg+$/)){
 		nameId = image.id;
 		nameId = nameId + ".jpg";
 		image.src = nameId;
 	}else{
-		console.log("Aqui2");
 		nameId = image.id;
 		nameId = nameId + "blur.jpg";
 		image.src = nameId;
 	}
+	
+	setTimeout(reblur, 3000, image);
 };
+
+function reblur(image){
+	var name = image.id;
+	name = name + "blur.jpg";
+	image.src = name;
+
+}
