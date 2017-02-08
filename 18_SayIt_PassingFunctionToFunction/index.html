@@ -1,0 +1,23 @@
+<!doctype HTML>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Say in that language</title>
+		<script>
+			function sayIt(translator){
+				var phrase = translator("Hello");
+				alert(phrase);
+			}
+			function hawaiianTranslator(word){
+				if(word == "Hello") return "Aloha1";
+				if(word == "Goodbye") return "Aloha2";
+			}
+			sayIt(hawaiianTranslator);
+		</script>
+	</head>
+	<body>
+		<h1> Translator </h1>
+	</body>
+
+</html>
