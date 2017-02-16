@@ -1,3 +1,10 @@
+function dogCatcher(obj){
+	if(obj instanceof Dog)
+		return true;
+	else
+		return false;
+}
+
 function Dog(name, breed, weight){
 	this.name = name;
 	this.breed = breed;
@@ -17,15 +24,13 @@ var spot = new Dog("Spot", "Chihuahua", 10);
 
 var dogs = [fido, fluffy, spot];
 
-for(var i = 0; i < dogs.length; i++){
-	var size = "small";
-	if(dogs[i].weight > 10){
-		size = "large";
-	}
-	console.log("Dog: " + dogs[i].name + " is a " +
-			size + " " + dogs[i].breed);
-
-	dogs[i].bark();
-}
-
-
+fido.owner = "Bob";
+delete fido.weight;
+fido.trust = function(person){
+		return (person === "Bob");
+	};
+var notBite = fido.trust("Bob");
+console.log(notBite);
+//will not work
+//var spot = new Dog("Spot", "Chihuahua", 10);
+//notBite = spot.trust("Bob");
